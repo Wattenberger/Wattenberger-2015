@@ -1,0 +1,55 @@
+@import '../../../../stylesheets/common';
+
+.navItem {
+  width: 120px;
+  margin: 6px 8px;
+  text-align: right;
+  padding: 6px 8px 26px 38px;
+  font-family: @ff1;
+  color: @bgc;
+  background: #fff;
+  border: 2px solid currentColor;
+  border-radius: 0 2px 2px 0;
+  transform: translate3d(-90px, 0, 0);
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  h2 {
+    color: currentColor;
+    background: linear-gradient(to right, @ac3, @ac2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &:hover {
+    background: #fff;
+    transform: translate3d(-70px, 0, 0) scale(1.06);
+    // color: @ac3;
+    h2 {
+      // color: @bgc;
+    }
+  }
+}
+
+.navItem--selected {
+  background: @bgc;
+  &:hover {
+    background: @bgc;
+    transform: translate3d(-90px, 0, 0);
+    cursor: default;
+  }
+  h2 {
+    background: linear-gradient(to right, alph(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 560px) {
+  .navItem {
+    width: auto;
+    padding: 8px 10px;
+    transform: translate3d(0,0,0);
+    &:hover {
+      transform: translate3d(0,-10px,0);
+    }
+  }
+}

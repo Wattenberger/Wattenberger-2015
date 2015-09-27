@@ -1,0 +1,27 @@
+@import '../../../stylesheets/common';
+
+.nav {
+  width: 180px;
+  display: flex;
+  // opacity: 0.2;
+  transition: opacity 0.3s ease-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 10px;
+  list-style-type: none;
+}
+
+@media (max-width: 560px) {
+  .nav {
+    width: 100%;
+  }
+  .navList {
+    flex-direction: row;
+  }  
+}

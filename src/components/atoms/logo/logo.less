@@ -1,0 +1,58 @@
+@import '../../../stylesheets/common';
+
+.logo {
+  height: 5em;
+  width: 6em;
+  margin: 0 0 13px 10px;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  &:hover {
+    transform: scale(1.2);
+    .a:before {
+      border-bottom-color: @ac3;
+    }
+    .wLeft:before, .wRight:before {
+      border-top-color: @ac2;
+    }
+  }
+}
+
+.a, .wLeft, .wRight {
+  width: 0;
+  height: 0;
+  display: block;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 3em solid @tc;
+    border-left: 2em solid transparent;
+    border-right: 2em solid transparent;
+    opacity: 0.3;
+    margin-left: 1em;
+    transition: border-color 0.4s ease-out;
+  }
+}
+
+
+.a:before {
+
+}
+
+.wLeft:before, .wRight:before {
+  border-top: 3em solid @tc;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom: none;
+  margin-top: 1.5em;
+}
+
+.wLeft:before {
+  margin-left: 0;
+}
+
+.wRight:before {
+  margin-left: 2em;
+}

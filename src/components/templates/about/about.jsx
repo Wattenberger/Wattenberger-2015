@@ -1,25 +1,39 @@
 import './about.less';
 
 import React from 'react/addons';
-import Header from '../../molecules/header/header';
-import Card from '../../molecules/card/card';
+import {Link} from 'react-router'
 
-const About = React.createClass({
+const excited = [
+  "generative art",
+  "the nuances of data visualization",
+  "laser cutting",
+  "pressure cooking",
+  "weird looking dogs",
+  "3d printing",
+  "home automation"
+]
 
-  render: function() {
-    return (
-      <div className="about">
-        <Header headerText='About' />
-        <div className="main">
-          <Card>
-            <h2>About Me</h2>
-            <hr />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequitur disserendi ratio cognitioque naturae; Aliter autem vobis placet. Nam de isto magna dissensio est. Apud ceteros autem philosophos, qui quaesivit aliquid, tacet; Huius ego nunc auctoritatem sequens idem faciam. Ergo hoc quidem apparet, nos ad agendum esse natos. Cetera illa adhibebat, quibus demptis negat se Epicurus intellegere quid sit bonum. Duo Reges: constructio interrete.</p>
-          </Card>
-        </div>
-      </div>
-    );
+class About extends React.Component {
+
+  renderList(list) {
+    return <ul>
+      {list.map(thing =>
+        <li>{thing}</li>
+      )}
+    </ul>
   }
-});
+
+  render() {
+    return (
+      <div className="about page">
+        <p>Hi, I’m Amelia Wattenberger.</p>
+        <p>I write code, think about data, and create digital experiences. Currently working at <a href="http://umbel.com" target="_blank">Umbel</a> in Austin, TX—the land of breakfast tacos and craft beer.</p>
+        <p>Things I get excited about:</p>
+        {this.renderList(excited)}
+        <p>Feel free to <Link to="/contact/">reach out</Link> if you have an absurd interest in any of these things.</p>
+      </div>
+    )
+  }
+}
 
 export default About;
