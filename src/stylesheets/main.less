@@ -1,0 +1,69 @@
+@import 'normalize';
+@import '_colors';
+@import '_variables';
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  color: @tc;
+  background: @bgc;
+  font-family: @ff2;
+  font-size: @fz3;
+  overflow: hidden;
+  ::selection {
+    color: #fff !important;
+    background: @black;
+  }
+}
+
+a {
+  color: @ac1;
+  background: linear-gradient(to right, @ac3, @ac2 1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: underline;
+  transition: all 5s ease-out;
+  &:hover {
+    background: linear-gradient(to right, @ac3, @ac2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &::selection {
+    background: #fff;
+  }
+}
+
+h1 {
+  font-family: @ff2;
+  color: @ac1;
+  font-size: @fz1;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+h2 {
+  display: inline-block;
+  font-family: @ff1;
+  color: @ac2;
+  text-transform: uppercase;
+  font-size: @fz4;
+  line-height: 1.1em;
+  letter-spacing: 0.06em;
+  margin: 0;
+  background: linear-gradient(to right, @ac3, @ac2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &::selection {
+    background: #fff;
+  }
+}
+
+p {
+  font-size: @fz2;
+  line-height: 1.3em;
+}
