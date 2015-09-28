@@ -1,5 +1,5 @@
 import React from 'react/addons';
-import {Route, Link} from 'react-router'
+import {Route, IndexRoute} from 'react-router'
 import App from '../components/app.jsx';
 import About from './../components/templates/about/about.jsx';
 import Thoughts from './../components/templates/thoughts/thoughts.jsx';
@@ -13,10 +13,10 @@ const pages = [
 
 var routes = (
   <Route path="/" component={App}>
+    <IndexRoute component={About} />
     {pages.map((page, idx) =>
       <Route path={page.slug + "/"} component={page.component} key={idx} />
     )}
-    <Route path="*" component={About} />
   </Route>
 );
 
