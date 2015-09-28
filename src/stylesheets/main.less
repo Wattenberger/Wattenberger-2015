@@ -47,33 +47,31 @@ html {
 }
 
 
-  .slide-out-enter, .slide-out-appear {
-    transform: translate3d(-140px, 0, 0);
-    position: absolute;
-    opacity: 0;
-  }
+.slide-out-enter, .slide-out-appear {
+  transform: translate3d(-140px, 0, 0);
+  position: absolute;
+  opacity: 0;
+}
 
-  .slide-out-enter.slide-out-enter-active, .slide-out-appear.slide-out-appear-active {
-    transform: translate3d(0,0,0);
-    transition: all .3s ease-out;
-    position: absolute;
-    opacity: 1;
-  }
+.slide-out-enter.slide-out-enter-active, .slide-out-appear.slide-out-appear-active {
+  transform: translate3d(0,0,0);
+  transition: all .3s ease-out;
+  position: absolute;
+  opacity: 1;
+}
 
-  .slide-out-leave {
-    transform: translate3d(0,0,0);
-    position: absolute;
-    opacity: 1;
-  }
+.slide-out-leave {
+  transform: translate3d(0,0,0);
+  position: absolute;
+  opacity: 1;
+}
 
-  .slide-out-leave.slide-out-leave-active {
-    transform: translate3d(-140px, 0, 0);
-    position: absolute;
-    transition: all .3s ease-out;
-    opacity: 0;
-  }
-
-
+.slide-out-leave.slide-out-leave-active {
+  transform: translate3d(-140px, 0, 0);
+  position: absolute;
+  transition: all .3s ease-out;
+  opacity: 0;
+}
 
 a {
   color: @ac1;
@@ -105,7 +103,7 @@ h2 {
   font-family: @ff1;
   color: @ac2;
   text-transform: uppercase;
-  font-size: @fz4;
+  font-size: @fz5;
   line-height: 1.1em;
   letter-spacing: 0.06em;
   margin: 0;
@@ -124,4 +122,16 @@ p {
 
 ul {
   list-style-type: none;
+}
+
+@media (max-width: 560px) {
+  .App {
+    flex-direction: column;
+  }
+  p {
+    font-size: @fz3;
+  }
+  .page ul {
+    font-size: @fz4;
+  }
 }

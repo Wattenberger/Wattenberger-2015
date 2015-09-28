@@ -10,7 +10,9 @@ const excited = [
   "pressure cooking",
   "weird looking dogs",
   "3d printing",
-  "home automation"
+  "home automation",
+  "d3.js",
+  "xiao long bao"
 ]
 
 class About extends React.Component {
@@ -27,10 +29,10 @@ class About extends React.Component {
     return (
       <div className="about page">
         <p>Hi, I’m Amelia Wattenberger.</p>
-        <p>I write code, think about data, and create digital experiences. Currently working at <a href="http://umbel.com" target="_blank">Umbel</a> in Austin, TX—the land of breakfast tacos and craft beer.</p>
+        <p>I write code, think about data, and create digital experiences. Currently front-end development & data visualization at <a href="http://umbel.com" target="_blank">Umbel</a> in Austin, TX—the land of breakfast tacos and craft beer.</p>
         <p>Things I get excited about:</p>
         {this.renderList(excited)}
-        <p>Feel free to <Link to="/contact/">reach out</Link> if you have an absurd interest in any of these things.</p>
+        <p>Feel free to <Link to="/contact/">reach out</Link> to chat about any of the above.</p>
       </div>
     )
   }
