@@ -13,7 +13,8 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, exclude: /node_modules/, loaders: jsxLoaders },
       { test: /\.css$/, loader: 'style-loader!css-loader!postcss-loader' },
-      { test: /\.less$/, loader: 'style-loader!css-loader!postcss-loader!less-loader' }
+      { test: /\.less$/, loader: 'style-loader!css-loader!postcss-loader!less-loader' },
+      { test: /\.(png|jpg|pdf)$/, loader: 'file-loader?name=img/[name].[ext]' }
     ],
   },
   noInfo: true,
