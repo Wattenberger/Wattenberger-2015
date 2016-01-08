@@ -3,7 +3,7 @@ import React from 'react';
 import {Router, PropTypes} from 'react-router';
 import Nav from './molecules/nav/nav';
 import favicon from './../img/favicon.png';
-import favicon from './../img/resume.pdf';
+import resume from './../img/resume.pdf';
 
 const pages = ["about","contact"]
 
