@@ -3,7 +3,7 @@ import React from 'react';
 import {Router, PropTypes} from 'react-router';
 import Nav from './molecules/nav/nav';
 
-const pages = ["about","thoughts","contact"]
+const pages = ["about","contact"]
 
 let KEYPRESS_HANDLER = null
 

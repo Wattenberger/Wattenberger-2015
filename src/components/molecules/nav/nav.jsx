@@ -6,7 +6,7 @@ import NavItem from "./navItem/navItem"
 import React, {PropTypes} from 'react/addons';
 const pages = [
   {name: "About", slug: "about"},
-  {name: "Thoughts", slug: "thoughts"},
+  // {name: "Thoughts", slug: "thoughts"},
   {name: "Contact", slug: "contact"},
 ]
 
